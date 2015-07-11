@@ -1,0 +1,5 @@
+{
+  "date": "2014-01-12",
+  "title": "ARM immediate value encoding",
+  "description": "ARM instructions use 12 bits to encode a 32-bit immediate value, using a 4-bit rotate and 8-bit constant. This is a great idea."
+}

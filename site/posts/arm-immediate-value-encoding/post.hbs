@@ -1,0 +1,16 @@
+{{{ body }}}
+
+<h2>Play with it</h2>
+
+<p>Here's an interactive version of an ARM assembler's immediate value encoder. Requires JavaScript and a modern browser.</p>
+
+<p>Choose an immediate value and see its encoding. See which values can't be encoded. Rotate the constant to see what happens.</p>
+
+<p id="encoding_examples">Try these examples: <a href="#">0x3FC00</a>, <a href="#">0x102</a>, <a href="#">0xFF0000FF</a>, <a href="#">0xC0000034</a></p>
+
+<form id="arm_immediate_encoding_form"><div class="button button_left"><button id="left_button">&lt;&lt;</button></div><div class="button button_left"><button id="right_button">&gt;&gt;</button></div><div class="button button_right"><button id="plus_button">+</button></div><div class="button button_right"><button id="minus_button">&minus;</button></div><div class="input"><input id="number_input" value="0x000000D7"></div></form>
+
+{{ embed 'decoded.svg' }}
+{{ embed 'encoded.svg' }}
+
+<p id="encoder_output">Encoding requires JavaScript.</p>

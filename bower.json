@@ -1,0 +1,23 @@
+{
+  "name": "brassica",
+  "version": "1.0.0",
+  "authors": [
+    "Alisdair McDiarmid <alisdair@mcdiarmid.org>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3",
+    "jquery": "~2.1.4",
+    "highlightjs": "~8.6.0"
+  }
+}

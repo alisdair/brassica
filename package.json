@@ -1,0 +1,15 @@
+{
+  "name": "brassica",
+  "version": "1.0.0",
+  "description": "Weblog with per-post JavaScript and assets, powered by Broccoli",
+  "dependencies": {
+    "bower": "^1.4.1",
+    "broccoli": "^0.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alisdair McDiarmid",
+  "license": "MIT"
+}
