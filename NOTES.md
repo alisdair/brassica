@@ -1,0 +1,12 @@
+- Find `site/posts/*/data.json`
+- Compile all Markdown files: `site/posts/*/*.md`
+- Find all post templates: `site/posts/*/post.hbs`
+  - If any are missing, insert default template (`{{ embed 'post.html' }}`)
+- Build per-post JavaScript
+- Add script tag to load per-post JavaScript to the end of the post template
+- Build HTML:
+  - Compile `site/index.hbs` -> `site/templates/post.hbs` -> each post
+  - Compile `site/index.hbs` -> `site/templates/index.hbs` -> all post data files
+- Build and minify site-wide JavaScript and CSS
+- Optimize images
+- Fingerprint all assets, process the HTML accordingly
