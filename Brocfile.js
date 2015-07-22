@@ -2,9 +2,20 @@ var markdownToHtml = require('broccoli-marked');
 var highlight = require('highlight.js');
 var mergeTrees = require('broccoli-merge-trees');
 var funnel = require('broccoli-funnel');
+var DefaultFile = require('./broccoli-default-file');
 
 var posts = funnel('site/posts', {
-  include: ['*/data.json']
+  include: ['*/']
+});
+
+var postData = funnel(posts, {
+  include: ['data.json']
+});
+
+var templates = new DefaultFile([posts], {
+  files: {
+    'post.hbs': '{{ body }}',
+  }
 });
 
 var markdowns = funnel('site/posts', {
@@ -22,4 +33,4 @@ var highlightCss = funnel('node_modules/highlight.js', {
   files: ['monokai.css']
 });
 
-module.exports = mergeTrees([htmls, highlightCss]);
+module.exports = mergeTrees([postData, templates, htmls, highlightCss]);
